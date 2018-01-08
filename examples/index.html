@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Vue RavePayment Example</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="../dist/rave.min.js"></script>
+    <style>
+    body {
+        font-size: 1em;
+        font-family: 'Tahoma', sans-serif;
+    }
+
+    .paymentbtn{
+        color: #61DAFB;
+        width: 250px;
+        height: 50px;
+        font-weight: 800;
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <Rave
+            :is-production="false"
+            :text="raveBtnText"
+            style-class="paymentbtn"
+            :email="email"
+            :amount="amount"
+            :reference="reference"
+            :rave-key="raveKey"
+            :callback="callback"
+            :close="close"
+            currency="NGN"
+        ></Rave>
+    </div>
+
+    <script type="text/javascript">
+    new Vue({
+        el: '#app',
+        components:{
+          'Rave': VueRavePayment.default
+        },
+        computed: {
+            reference(){
+              let text = "";
+              let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+              for( let i=0; i < 10; i++ )
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+              return text;
+            }
+        },
+        methods: {
+          callback: function(response){
+            console.log(response)
+          },
+          close: function(){
+            console.log("Payment closed")
+          }
+        },
+        data: {
+          raveBtnText: "Pay Me, My Money",
+          raveKey: "FLWPUBK-c59ee426f4c86db0eef5d6514cd2b187-X",
+          email: "foobar@example.com",
+          amount: 10000
+        }
+    });
+    </script>
+</body>
+</html>
