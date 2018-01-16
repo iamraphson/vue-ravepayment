@@ -121,7 +121,7 @@ new Vue({
 ```
 [Usage Example via CDN](examples/index.html)
 
-Please checkout [Rave Documentation](https://flutterwavedevelopers.readme.io/docs/rave-inline-js#section-parameter-reference) for other available options you can add to the tag
+Please checkout [Rave Documentation](https://flutterwavedevelopers.readme.io/v1.0/reference#introduction) for other available options you can add to the tag
 
 ## Deployment
 WHEN DEPLOYING TO PRODUCTION/LIVE SYSTEM, take note of the following;
