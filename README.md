@@ -125,7 +125,7 @@ Please checkout [Rave Documentation](https://flutterwavedevelopers.readme.io/v1.
 
 ## Deployment
 WHEN DEPLOYING TO PRODUCTION/LIVE SYSTEM, take note of the following;
-1) Change `is-production` attribute in the component tag to `true` i.e `:is-production="false"`
+1) Change `is-production` attribute in the component tag to `true` i.e `:is-production="true"`
 2) Change RavePay PUBLIC KEY 
 
 ## Contributing
