@@ -26,7 +26,7 @@ export default {
     data(){
         return{
           raveBtnText: "Pay Me, My Money",
-          raveKey: "FLWPUBK-c59ee426f4c86db0eef5d6514cd2b187-X",
+          raveKey: "FLWPUBK-xxxxxxxxxxxxx-X",
           email: "foobar@example.com",
           amount: 10000
         }

@@ -80,7 +80,7 @@
       created() {
           const script = document.createElement('script')
           script.src = (!this.isProduction)
-      ? 'http://flw-pms-dev.eu-west-1.elasticbeanstalk.com/flwv3-pug/getpaidx/api/flwpbf-inline.js'
+      ? 'https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/flwpbf-inline.js'
       : 'https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js'
           document.getElementsByTagName('head')[0].appendChild(script)
       },
