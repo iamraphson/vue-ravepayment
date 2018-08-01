@@ -75,6 +75,18 @@
           custom_logo: {
               type: String,
               default: ''
+          },
+          redirect_url: {
+              type: String,
+              default: ''
+          },
+          payment_plan: {
+              type: Number,
+              default: ''
+          },
+          subaccounts: {
+              type: Object,
+              default: ''
           }
       },
       created() {
@@ -100,7 +112,10 @@
                   customer_lastname: this.customer_lastname,
                   custom_title: this.custom_title,
                   custom_description: this.custom_description,
-                  custom_logo: this.custom_logo
+                  custom_logo: this.custom_logo,
+                  redirect_url: this.redirect_url,
+                  payment_plan: this.payment_plan,
+                  subaccounts: this.subaccounts
               })
           }
       }
