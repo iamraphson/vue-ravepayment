@@ -16,7 +16,7 @@ npm install vue vue-ravepayment --save
 ```javascript
 <!-- Vue -->
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
-<!-- Vue-Paystack -->
+<!-- Vue-Rave -->
 <script src="https://unpkg.com/vue-ravepayment/dist/rave.min.js"></script>
 ```
 
