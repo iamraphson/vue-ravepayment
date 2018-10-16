@@ -29,7 +29,6 @@ npm install vue vue-ravepayment --save
 <template>
    <Rave
        :is-production="false"
-       :text="raveBtnText"
        style-class="paymentbtn"
        :email="email"
        :amount="amount"
@@ -38,7 +37,7 @@ npm install vue vue-ravepayment --save
        :callback="callback"
        :close="close"
        currency="NGN"
-   ></Rave>
+   ><i>Pay Me, My Money</i></Rave>
 </template>
 <script type="text/javascript">
 import Rave from 'vue-ravepayment';
@@ -48,7 +47,6 @@ export default {
     },
     data(){
         return{
-          raveBtnText: "Pay Me, My Money",
           raveKey: "FLWPUBK-xxxxxxxxxxxxxxxx-X",
           email: "foobar@example.com",
           amount: 10000

@@ -3,6 +3,7 @@
 <head>
     <title>Vue RavePayment Example</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="../dist/rave.min.js"></script>
     <style>
@@ -10,20 +11,12 @@
         font-size: 1em;
         font-family: 'Tahoma', sans-serif;
     }
-
-    .paymentbtn{
-        color: #61DAFB;
-        width: 250px;
-        height: 50px;
-        font-weight: 800;
-    }
     </style>
 </head>
 <body>
     <div id="app">
         <Rave
             :is-production="false"
-            :text="raveBtnText"
             style-class="paymentbtn"
             :email="email"
             :amount="amount"
@@ -32,7 +25,10 @@
             :callback="callback"
             :close="close"
             currency="NGN"
-        ></Rave>
+        >
+            <i class="fas fa-money-bill-alt"></i>
+            Make Payment
+        </Rave>
     </div>
 
     <script type="text/javascript">
@@ -61,7 +57,6 @@
           }
         },
         data: {
-          raveBtnText: "Pay Me, My Money",
           raveKey: "FLWPUBK-c59ee426f4c86db0eef5d6514cd2b187-X",
           email: "foobar@example.com",
           amount: 10000

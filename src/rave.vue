@@ -1,8 +1,10 @@
 <template>
   <button
-    :class="styleClass"
+    :class="``"
     @click="payWithRave"
-    v-text="text"/>
+  >
+    <slot>Make Payment</slot>
+  </button>
 </template>
 
 <script type="text/javascript">
@@ -12,10 +14,6 @@ export default {
             type: Boolean,
             required: false,
             default: false
-        },
-        text: {
-            type: String,
-            default: 'Make Payment'
         },
         styleClass: {
             type: String,
@@ -83,9 +81,17 @@ export default {
             type: String,
             default: ''
         },
+        payment_method: {
+            type: String,
+            default: 'both'
+        },
         payment_plan: {
+            type: String,
+            default: ''
+        },
+        hosted_payment: {
             type: Number,
-            default: String
+            default: 0
         },
         subaccounts: {
             type: Object,
@@ -118,7 +124,9 @@ export default {
                 custom_logo: this.custom_logo,
                 redirect_url: this.redirect_url,
                 payment_plan: this.payment_plan,
-                subaccounts: this.subaccounts
+                payment_method: this.payment_method,
+                subaccounts: this.subaccounts,
+                hosted_payment: this.hosted_payment
             })
         }
     }

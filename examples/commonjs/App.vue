@@ -12,7 +12,7 @@
                 :callback="callback"
                 :close="close"
                 currency="NGN"
-            ></Rave>
+            ><i>Pay Me, My Money</i></Rave>
         </p>
     </div>
 </template>
