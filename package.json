@@ -1,6 +1,6 @@
 {
   "name": "vue-ravepayment",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Vue Rave Payment Component for Vue 2.x.",
   "main": "dist/rave.min.js",
   "scripts": {
