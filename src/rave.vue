@@ -57,39 +57,39 @@ export default {
             type: String,
             default: 'NG'
         },
-        customer_firstname: {
+        customerFirstname: {
             type: String,
             default: ''
         },
-        customer_lastname: {
+        customerLastname: {
             type: String,
             default: ''
         },
-        custom_title: {
+        customTitle: {
             type: String,
             default: ''
         },
-        custom_description: {
+        customDescription: {
             type: String,
             default: ''
         },
-        custom_logo: {
+        customLogo: {
             type: String,
             default: ''
         },
-        redirect_url: {
+        redirectUrl: {
             type: String,
             default: ''
         },
-        payment_method: {
+        paymentMethod: {
             type: String,
             default: 'both'
         },
-        payment_plan: {
+        paymentPlan: {
             type: String,
             default: ''
         },
-        hosted_payment: {
+        hostedPayment: {
             type: Number,
             default: 0
         },
