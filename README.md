@@ -37,6 +37,12 @@ npm install vue vue-ravepayment --save
        :callback="callback"
        :close="close"
        currency="NGN"
+       country="NG"
+       :customerPhone="phone"
+       :customerFirstname="firstName"
+       :customerLastname="lastName"
+       :customLogo="image"
+       :customTitle="title"
    ><i>Pay Me, My Money</i></Rave>
 </template>
 <script type="text/javascript">
@@ -49,7 +55,11 @@ export default {
         return{
           raveKey: "FLWPUBK-xxxxxxxxxxxxxxxx-X",
           email: "foobar@example.com",
-          amount: 10000
+          amount: 10000,
+          phone: "08123456789",
+          firstName: "Temi",
+          lastName: "Desola",
+          image: ""
         }
     },
     computed: {
