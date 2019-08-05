@@ -13,7 +13,7 @@ export default {
         isProduction: {
             type: Boolean,
             required: false,
-            default: false
+            default: true
         },
         styleClass: {
             type: String,
@@ -46,8 +46,8 @@ export default {
             default: () => {}
         },
         metadata: {
-            type: Object,
-            default: () => { return {} }
+            type: Array,
+            default: () => { return [] }
         },
         currency: {
             type: String,
@@ -81,28 +81,26 @@ export default {
             type: String,
             default: ''
         },
-        paymentMethod: {
+        paymentOptions: {
             type: String,
-            default: 'both'
+            default: 'card'
         },
         paymentPlan: {
-            type: String,
-            default: ''
+            type: Number,
+            default: 0
         },
         hostedPayment: {
             type: Number,
             default: 0
         },
         subaccounts: {
-            type: Object,
-            default: () => { return {} }
+            type: Array,
+            default: () => { return [] }
         }
     },
     created() {
         const script = document.createElement('script')
-        script.src = (!this.isProduction)
-            ? 'https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/flwpbf-inline.js'
-            : 'https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js'
+        script.src = 'https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js'
         document.getElementsByTagName('head')[0].appendChild(script)
     },
     methods: {
@@ -117,16 +115,15 @@ export default {
                 meta: this.metadata,
                 currency: this.currency,
                 country: this.country,
-                customer_firstname: this.customer_firstname,
-                customer_lastname: this.customer_lastname,
-                custom_title: this.custom_title,
-                custom_description: this.custom_description,
-                custom_logo: this.custom_logo,
-                redirect_url: this.redirect_url,
-                payment_plan: this.payment_plan,
-                payment_method: this.payment_method,
+                customer_firstname: this.customerFirstname,
+                customer_lastname: this.customerLastname,
+                custom_title: this.customTitle,
+                custom_logo: this.customLogo,
+                redirect_url: this.redirectUrl,
+                payment_plan: this.paymentPlan,
+                payment_options: this.paymentOptions,
                 subaccounts: this.subaccounts,
-                hosted_payment: this.hosted_payment
+                hosted_payment: this.hostedPayment
             })
         }
     }
