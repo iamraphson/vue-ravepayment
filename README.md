@@ -27,8 +27,6 @@ npm install vue vue-ravepayment --save
 ###### my-compnent.vue sample
 ```vue
 <template>
- <div>
-   <h1>Testing the vue plugin</h1>
      <Rave
        :is-production="true"
        style-class="paymentbtn"
@@ -50,7 +48,6 @@ npm install vue vue-ravepayment --save
        currency="NGN"
        country="NG"
    ><i>Pay Me, My Money</i></Rave>
- </div>
 </template>
 <script type="text/javascript">
 import Rave from 'vue-ravepayment';
