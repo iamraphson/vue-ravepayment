@@ -47,7 +47,6 @@ npm install vue vue-ravepayment --save
        paymentOptions="card,barter,account,ussd"
        hostedPayemt=1
        customTitle="Testing title"
-       customLogo="https://www.freelogodesign.org/Content/img/logo-samples/bakary.png"
        currency="NGN"
        country="NG"
    ><i>Pay Me, My Money</i></Rave>
