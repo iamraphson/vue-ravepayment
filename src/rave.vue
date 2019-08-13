@@ -1,6 +1,6 @@
 <template>
   <button
-    :class="``"
+    :class="styleClass"
     @click="payWithRave"
   >
     <slot>Make Payment</slot>
@@ -10,11 +10,6 @@
 <script type="text/javascript">
 export default {
     props: {
-        isProduction: {
-            type: Boolean,
-            required: false,
-            default: true
-        },
         styleClass: {
             type: String,
             default: 'payButton'

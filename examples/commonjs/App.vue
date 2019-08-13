@@ -2,17 +2,16 @@
     <div class="App">
         <p class="App-intro">
             <Rave
-                :is-production="false"
-                :text="raveBtnText"
                 style-class="paymentbtn"
                 :email="email"
                 :amount="amount"
+                payment-options="card"
                 :reference="reference"
                 :rave-key="raveKey"
                 :callback="callback"
                 :close="close"
                 currency="NGN"
-            ><i>Pay Me, My Money</i></Rave>
+            ></Rave>
         </p>
     </div>
 </template>
@@ -25,8 +24,7 @@ export default {
     },
     data(){
         return{
-          raveBtnText: "Pay Me, My Money",
-          raveKey: "FLWPUBK-xxxxxxxxxxxxx-X",
+          raveKey: "FLWPUBK_TEST-ad5ad78e73e83375c1cf9a7f1fe2e5b0-X",
           email: "foobar@example.com",
           amount: 10000
         }

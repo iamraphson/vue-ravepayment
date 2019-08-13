@@ -6,17 +6,22 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="../dist/rave.min.js"></script>
-    <style>
-    body {
-        font-size: 1em;
-        font-family: 'Tahoma', sans-serif;
-    }
+    <style type="text/css">
+        body {
+            font-size: 1em;
+            font-family: 'Tahoma', sans-serif;
+        }
+
+        .paymentbtn {
+            font-size: 3em;
+            color: red;
+        }
+
     </style>
 </head>
 <body>
     <div id="app">
         <Rave
-            :is-production="false"
             style-class="paymentbtn"
             :email="email"
             :amount="amount"
@@ -27,7 +32,7 @@
             currency="NGN"
         >
             <i class="fas fa-money-bill-alt"></i>
-            Make Payment
+            Payment Make Payment - 1
         </Rave>
     </div>
 
@@ -57,9 +62,9 @@
           }
         },
         data: {
-          raveKey: "FLWPUBK-c59ee426f4c86db0eef5d6514cd2b187-X",
+          raveKey: "FLWPUBK_TEST-ad5ad78e73e83375c1cf9a7f1fe2e5b0-X",
           email: "foobar@example.com",
-          amount: 10000
+          amount: 90000
         }
     });
     </script>

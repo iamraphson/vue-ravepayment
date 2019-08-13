@@ -28,7 +28,6 @@ npm install vue vue-ravepayment --save
 ```vue
 <template>
      <Rave
-       :is-production="true"
        style-class="paymentbtn"
        :email="email"
        :amount="amount"
@@ -43,7 +42,7 @@ npm install vue vue-ravepayment --save
        :customerFirstname="fname"
        :customerLastname="lname"
        paymentOptions="card,barter,account,ussd"
-       hostedPayemt=1
+       hostedPayemt="1"
        customTitle="Testing title"
        currency="NGN"
        country="NG"

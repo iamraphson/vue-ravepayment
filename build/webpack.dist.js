@@ -4,6 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
+    mode: 'production',
     entry: {
         'rave': './src/index.js'
     },
@@ -43,6 +44,7 @@ module.exports = {
                     output: {
                         comments: false
                     },
+                    warnings: false,
                     compress: {
                         unsafe_comps: true,
                         properties: true,
@@ -50,7 +52,6 @@ module.exports = {
                         pure_getters: true,
                         collapse_vars: true,
                         unsafe: true,
-                        warnings: false,
                         sequences: true,
                         dead_code: true,
                         drop_debugger: true,
