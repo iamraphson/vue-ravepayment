@@ -27,8 +27,8 @@ npm install vue vue-ravepayment --save
 ###### my-compnent.vue sample
 ```vue
 <template>
-   <Rave
-       :is-production="false"
+     <Rave
+       :is-production="true"
        style-class="paymentbtn"
        :email="email"
        :amount="amount"
@@ -36,7 +36,17 @@ npm install vue vue-ravepayment --save
        :rave-key="raveKey"
        :callback="callback"
        :close="close"
+       :metadata="meta"
+       :subaccounts="subaccounts"
+       :redirectUrl="redirect"
+       :paymentPlan="plan"
+       :customerFirstname="fname"
+       :customerLastname="lname"
+       paymentOptions="card,barter,account,ussd"
+       hostedPayemt=1
+       customTitle="Testing title"
        currency="NGN"
+       country="NG"
    ><i>Pay Me, My Money</i></Rave>
 </template>
 <script type="text/javascript">
@@ -47,19 +57,35 @@ export default {
     },
     data(){
         return{
-          raveKey: "FLWPUBK-xxxxxxxxxxxxxxxx-X",
+          raveKey: "FLWPUBK-xxxxxxxxxxxxxxxxxx-X",
           email: "foobar@example.com",
-          amount: 10000
+          amount: 8000,
+          plan: 2928,
+          fname: "Adewale",
+          lname: "Ayuba",
+          redirect: "https://google.com",
+          meta: [{
+            metaname: 'school',
+            metavalue: 'high school'
+          }],
+          sub: [
+            {
+            id: "1324"
+          },
+          {
+            id: "1221"
+          }
+          ]
         }
     },
     computed: {
       reference(){
         let text = "";
         let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
+ 
         for( let i=0; i < 10; i++ )
           text += possible.charAt(Math.floor(Math.random() * possible.length));
-
+ 
         return text;
       }
     },
@@ -77,7 +103,7 @@ export default {
     .paymentbtn{
         color: #04193d;
         width: 250px;
-        height: 50px;
+        height: 100px;
         font-weight: 800;
     }
 </style>
