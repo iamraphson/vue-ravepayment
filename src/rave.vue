@@ -60,6 +60,10 @@ export default {
             type: String,
             default: ''
         },
+        customerPhoneNumber: {
+            type: String,
+            required: true
+        },
         customTitle: {
             type: String,
             default: ''
@@ -112,6 +116,7 @@ export default {
                 country: this.country,
                 customer_firstname: this.customerFirstname,
                 customer_lastname: this.customerLastname,
+                customer_phone: this.customerPhoneNumber,
                 custom_title: this.customTitle,
                 custom_logo: this.customLogo,
                 redirect_url: this.redirectUrl,
