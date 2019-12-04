@@ -41,6 +41,7 @@ npm install vue vue-ravepayment --save
        :paymentPlan="plan"
        :customerFirstname="fname"
        :customerLastname="lname"
+       :customerPhoneNumber="phone_number"
        paymentOptions="card,barter,account,ussd"
        hostedPayemt="1"
        customTitle="Testing title"
@@ -62,6 +63,7 @@ export default {
           plan: 2928,
           fname: "Adewale",
           lname: "Ayuba",
+          phone_number: "09000000000",
           redirect: "https://google.com",
           meta: [{
             metaname: 'school',
